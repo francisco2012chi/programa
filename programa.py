@@ -4,6 +4,7 @@ def fc(x):
 		return
 	print(x)
 	fc(x-1)
-	print(x)
+	if x!=1:
+		print(x)
 
 fc(int(input('Digite um número: ')))

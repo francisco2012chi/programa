@@ -6,14 +6,32 @@ def linha(x):
 	print(x, end='')
 	linha(x-1)
 
-def fc(x):
+def pir(x):
 	if x == 0:
 		return
 	linha(x)
 	print('')
-	fc(x-1)
+	pir(x-1)
 	if x!=1:
 		linha(x)
 		print('')
 
-fc(int(input('Digite um número: ')))
+def listar(x):
+	if x == 0:
+		return
+	listar(x-1)
+	print(x)
+
+def listar_inv(x):
+	if x == 0:
+		return
+	print(x)
+	listar_inv(x-1)
+
+op = input('Digite o comando: ')
+if op == 'pir':
+	pir(int(input('Digite um número: ')))
+if op == 'listar':
+	listar(int(input('Digite um número: ')))
+if op == 'listar_inv':
+	listar_inv(int(input('Digite um número: ')))

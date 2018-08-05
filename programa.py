@@ -28,6 +28,11 @@ def listar_inv(x):
 	print(x)
 	listar_inv(x-1)
 
+def fib(x):
+	if x == 1 or x == 2:
+		return 1
+	return fib(x-1) + fib(x-2)
+
 op = input('Digite o comando: ')
 if op == 'pir':
 	pir(int(input('Digite um número: ')))
@@ -35,3 +40,5 @@ if op == 'listar':
 	listar(int(input('Digite um número: ')))
 if op == 'listar_inv':
 	listar_inv(int(input('Digite um número: ')))
+if op == 'fib':
+	print(fib(int(input('Digite um número: '))))
